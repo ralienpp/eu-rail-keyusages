@@ -12,7 +12,7 @@ pi:
   sortrefs: 'false'
 title: X.509 Certificate Extended Key Usage (EKU) for ERJU System Pillar
 abbrev: EKU for ERJU System Pillar
-area: sec
+area: "Security"
 wg: LAMPS Working Group
 keyword:
 - ERJU
