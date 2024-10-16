@@ -261,9 +261,7 @@ END
 # History of Changes {#history}
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
-
-dummy edit
-
+given that 
 
 Version 00:
 
