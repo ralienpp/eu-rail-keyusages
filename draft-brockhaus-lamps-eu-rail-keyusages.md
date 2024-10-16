@@ -246,7 +246,7 @@ id-kp OBJECT IDENTIFIER ::=
 
 -- Extended Key Usage Values
 
-id-kp-configSigning        OBJECT IDENTIFIER ::= { id-kp TBD2 }given that 
+id-kp-configSigning        OBJECT IDENTIFIER ::= { id-kp TBD2 }
 id-kp-trustanchorSigning   OBJECT IDENTIFIER ::= { id-kp TBD3 }
 id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 }
 id-kp-safetyCommunication  OBJECT IDENTIFIER ::= { id-kp TBD5 }
