@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-22T01:19:00.317436+00:00",
+  "timestamp": "2024-10-24T01:18:02.016704+00:00",
   "repo": "ralienpp/eu-rail-keyusages",
   "labels": [
     {
@@ -49,6 +49,23 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDONBYbm86baO0g",
+      "title": "about the cryptography library you used",
+      "url": "https://github.com/ralienpp/eu-rail-keyusages/issues/1",
+      "state": "OPEN",
+      "author": "Aswin2203",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Hi @ralienpp I am having a query on the cryptography library that you have forked in your GitHub. I have also read a discussion on that crypto library repository roadmap.\r\n\r\nMy Query is about is there any library in python that can generate a X509 certificate using the Post Quantum Cryptography [Open Quantum Safe] Algorithms Key pair [like dilithium] Or is there any other way to generate a X509 certificate using PQC key pairs. It would be so much helpful if you can provide me a solution.\r\n\r\nAs if I generate a certificate with dilithium key pair using cryptography library, I get this error \r\n```ValueError: Unknown key type: 1.3.6.1.4.1.2.267.12.6.5```\r\n",
+      "createdAt": "2024-10-23T05:46:17Z",
+      "updatedAt": "2024-10-23T05:46:17Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
