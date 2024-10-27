@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-24T01:18:02.016704+00:00",
+  "timestamp": "2024-10-27T01:23:46.527190+00:00",
   "repo": "ralienpp/eu-rail-keyusages",
   "labels": [
     {
@@ -55,16 +55,38 @@
       "id": "I_kwDONBYbm86baO0g",
       "title": "about the cryptography library you used",
       "url": "https://github.com/ralienpp/eu-rail-keyusages/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "Aswin2203",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Hi @ralienpp I am having a query on the cryptography library that you have forked in your GitHub. I have also read a discussion on that crypto library repository roadmap.\r\n\r\nMy Query is about is there any library in python that can generate a X509 certificate using the Post Quantum Cryptography [Open Quantum Safe] Algorithms Key pair [like dilithium] Or is there any other way to generate a X509 certificate using PQC key pairs. It would be so much helpful if you can provide me a solution.\r\n\r\nAs if I generate a certificate with dilithium key pair using cryptography library, I get this error \r\n```ValueError: Unknown key type: 1.3.6.1.4.1.2.267.12.6.5```\r\n",
       "createdAt": "2024-10-23T05:46:17Z",
-      "updatedAt": "2024-10-23T05:46:17Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2024-10-25T04:12:58Z",
+      "closedAt": "2024-10-25T04:12:57Z",
+      "comments": [
+        {
+          "author": "ralienpp",
+          "authorAssociation": "OWNER",
+          "body": "Hi, the `cryptography` library is waiting for `openssl` to implement the post-quantum algorithms, so they're not available and probably won't be there soon.\r\n\r\nTo achieve what you want, the current approach would be:\r\n\r\n1. Generate the certificate structure using a library like `pyasn1`.\r\n2. Generate a Dilithium key-pair with the Python wrapper for `liboqs` (Open Quantum Safe); note that Dilithium is now \"ML-DSA\".\r\n3. Update the structure from step#1 with the public key and the OID for it.\r\n4. Sign the updated structure with the key from step#2.",
+          "createdAt": "2024-10-24T18:17:28Z",
+          "updatedAt": "2024-10-24T18:17:28Z"
+        },
+        {
+          "author": "ralienpp",
+          "authorAssociation": "OWNER",
+          "body": "p.s. I would also reconsider the requirements, do you really need it to be done in Python? You can use the OpenQuantumSafe opensslv3 docker image to get an environment where you can generate such certificates from the command line with OpenSSL. That would be **much** easier.",
+          "createdAt": "2024-10-24T18:18:50Z",
+          "updatedAt": "2024-10-24T18:18:50Z"
+        },
+        {
+          "author": "Aswin2203",
+          "authorAssociation": "NONE",
+          "body": "@ralienpp Thank you for your explanation I got some idea from it to proceed with my goal. Adding to your point actually I need to implement this in python for a purpose, so I was looking for a solution.",
+          "createdAt": "2024-10-25T04:12:57Z",
+          "updatedAt": "2024-10-25T04:12:57Z"
+        }
+      ]
     }
   ],
   "pulls": []
